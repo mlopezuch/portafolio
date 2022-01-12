@@ -14,7 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 
 function SobreMi() {
     return (
-        <section className="sobre_mi">
+        <section className="SobreMi">
           <h1>¡Bienvenid@! 👋</h1>
           <p>
             Mi nombre es Matías López, soy un desarrollador fullstack de
@@ -42,7 +42,7 @@ function SobreMi() {
               <Avatar sx={{ width: 80, height: 80 }} alt="CSS" src={css} />
             </Tooltip>
 
-            <Tooltip title="Javascript" arrow>
+            <Tooltip title="JavaScript" arrow>
               <Avatar sx={{ width: 80, height: 80 }} alt="JS" src={js} />
             </Tooltip>
 

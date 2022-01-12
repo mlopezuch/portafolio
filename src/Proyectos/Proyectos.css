@@ -1,0 +1,32 @@
+.Proyectos>h1 {
+    margin-bottom: 40px;
+}
+
+.Proyectos img {
+    border-radius: 7px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+li {
+    font-weight: 300;
+    line-height: 30px;
+    list-style: none;
+    font-size: 1rem !important;
+}
+
+li::before {
+    content: ">";
+    margin-right: 5px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-div>.MuiButton-contained {
+    /* background-color: #6a1b9a; */
+}

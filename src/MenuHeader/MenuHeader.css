@@ -1,6 +1,7 @@
 .Header {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -23,7 +24,7 @@
 }
 
 .logo::after {
-    margin-top: 1%;
+    margin-top: 0.5%;
     background: #4b6cc1;
     border-radius: 1000px;
     content: "";
@@ -44,4 +45,24 @@
     font-weight: 600;
     font-size: 18px;
     color: #5e5e5e !important
+}
+
+.header__menu>a:hover {
+    color: #4b6cc1 !important
+}
+
+.header__menu .active {
+    color: #4b6cc1 !important
+}
+
+.header__menu .active::after {
+    margin-top: 1%;
+    background: #4b6cc1;
+    border-radius: 1000px;
+    content: "";
+    display: block;
+    height: 6px;
+    max-width: 6px;
+    width: 100%;
+    margin: auto
 }

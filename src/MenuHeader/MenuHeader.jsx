@@ -1,10 +1,16 @@
 import React from "react";
-import './MenuHeader.css'
-import img from "./avatar.jpg";
+import "./MenuHeader.css";
+import img from "./yo2.jpg";
 import { Avatar } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 
 function MenuHeader() {
+  const CustomLink = (props) => {
+    let match = useMatch(props.to);
+
+    return <Link className={match ? "active" : ""} {...props} />;
+  };
+
   return (
     <div className="Header">
       <Avatar
@@ -15,9 +21,9 @@ function MenuHeader() {
       <div className="header__section">
         <h1 className="logo">MATÍAS</h1>
         <div className="header__menu">
-          <Link to="/">SOBRE MI</Link>
-          <Link to="/proyectos">PROYECTOS</Link>
-          <Link to="/contacto">CONTACTO</Link>
+          <CustomLink to="/">SOBRE MI</CustomLink>
+          <CustomLink to="/proyectos">PROYECTOS</CustomLink>
+          <CustomLink to="/contacto">CONTACTO</CustomLink>
         </div>
       </div>
     </div>
