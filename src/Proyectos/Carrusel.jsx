@@ -1,51 +1,41 @@
 import React from "react";
-import Carousel from "react-material-ui-carousel";
-import teamptu from "./teamptu.png";
-import teamptu2 from "./teamptu2.png";
-import teamptu3 from "./teamptu3.png";
-import teamptu4 from "./teamptu4.png";
-import teamptu5 from "./teamptu5.png";
+import ImageGallery from "react-image-gallery";
+import teamptu from "./img/teamptu.png";
+import teamptu2 from "./img/teamptu2.png";
+import teamptu3 from "./img/teamptu3.png";
+import teamptu4 from "./img/teamptu4.png";
+import teamptu5 from "./img/teamptu5.png";
+import teamptu6 from "./img/teamptu6.png";
 
-function Carrusel() {
-
-  const items = [
-      {
-        src:teamptu,
-        alt:"TeamPTU"
-      },
-      {
-        src:teamptu2,
-        alt:"TeamPTU"
-      },
-      {
-        src:teamptu3,
-        alt:"TeamPTU"
-      },
-      {
-        src:teamptu4,
-        alt:"TeamPTU"
-      },
-      {
-        src:teamptu5,
-        alt:"TeamPTU"
-      }
-  ]
-
-  function Item({item}) {
-    return (
-      
-        <img src={item.src} alt={item.alt} width="100%" min-height="100%" />
-      
-    );
+const images = [
+  {
+    original: teamptu,
+    thumbnail: teamptu,
+  },
+  {
+    original: teamptu2,
+    thumbnail: teamptu2,
+  },
+  {
+    original: teamptu3,
+    thumbnail: teamptu3,
+  },
+  {
+    original: teamptu4,
+    thumbnail: teamptu4,
+  },
+  {
+    original: teamptu5,
+    thumbnail: teamptu5,
+  },
+  {
+    original: teamptu6,
+    thumbnail: teamptu6,
   }
+];
 
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
-      ))}
-    </Carousel>
-  );
+function Carrusel2() {
+  return <ImageGallery items={images} />;
 }
 
-export default Carrusel;
+export default Carrusel2;

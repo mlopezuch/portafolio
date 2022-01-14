@@ -1,10 +1,9 @@
 import React from "react";
 import "./Proyectos.css";
-import teamptu from "./teamptu.png";
-import twitter from "./twitter-clon.png";
+import twitter from "./img/twitter-clon.png";
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
-import Carrusel from './Carrusel'
+import Carrusel from "./Carrusel";
 
 function Proyectos() {
   return (
@@ -20,7 +19,9 @@ function Proyectos() {
         <Grid item md={8}>
           {/* Aqui un carrusel béllako */}
           {/* <img src={teamptu} alt="Team PTU" width="100%" /> */}
-          <Carrusel/>
+
+          <Carrusel />
+
           {/* Aquí termina el carrusel béllako */}
         </Grid>
         <Grid item md={4}>

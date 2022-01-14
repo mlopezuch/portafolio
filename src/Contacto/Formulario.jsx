@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./Formulario.css";
 import TextField from "@mui/material/TextField";
-import { Button, Grid, Paper } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { useFormik } from "formik";
+import Backdrop from "./Backdrop";
+import { useSnackbar } from "notistack";
+import emailjs, { init } from "@emailjs/browser";
 
 const validate = (values) => {
   const errors = {};
@@ -31,6 +34,14 @@ const validate = (values) => {
 };
 
 function Formulario() {
+  const [sending, setSending] = React.useState(false);
+  const { enqueueSnackbar } = useSnackbar();
+  const form = React.useRef();
+
+  React.useEffect(() => {
+    init("user_8HcwBv1F4ftyLrke8nWf5");
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       nombre: "",
@@ -40,16 +51,50 @@ function Formulario() {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      /* alert(JSON.stringify(values, null, 2)); */
+      setSending(true);
+
+      emailjs
+        .sendForm(
+          "service_kyb37s7",
+          "template_g626xik",
+          form.current,
+          "user_8HcwBv1F4ftyLrke8nWf5"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSending(false);
+            formik.handleReset();
+            enqueueSnackbar("¡Mensaje enviado! 👍", {
+              variant: "success",
+            });
+          },
+          (error) => {
+            console.log(error.text);
+            setSending(false);
+            enqueueSnackbar("Hubo un error al enviar el mensaje 😓", {
+              variant: "error",
+            });
+          }
+        );
+
+      /* setTimeout(() => {
+        setSending(false);
+        //formik.handleReset();
+        enqueueSnackbar("¡Mensaje enviado! 👍", {
+          variant: "success",
+        });
+      }, 3000); */
     },
   });
 
-  const Item = ({ children }) => {
+  /* const Item = ({ children }) => {
     return <Paper elevation={0}>{children}</Paper>;
-  };
+  }; */
 
   return (
-    <form onSubmit={formik.handleSubmit} autoComplete="off">
+    <form ref={form} onSubmit={formik.handleSubmit} autoComplete="off">
       {/* <Paper elevation={3} sx={{padding:'25px',borderRadius:'5px'}}> */}
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
@@ -131,6 +176,8 @@ function Formulario() {
             Enviar
           </Button>
         </Grid>
+
+        <Backdrop open={sending} />
       </Grid>
     </form>
   );

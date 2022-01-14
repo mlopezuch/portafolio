@@ -10,6 +10,7 @@ import mongodb from "./img/mongodb.png";
 import reactjs from "./img/react.png";
 import express from "./img/express.png";
 import git from "./img/git.png";
+import socketio from './img/socketio.png'
 import Tooltip from "@mui/material/Tooltip";
 
 function SobreMi() {
@@ -29,26 +30,26 @@ function SobreMi() {
             otras cosas 😄.
           </p>
 
-          <h2>Mis tecnologías regalonas:</h2>
+          <h2>Mi experiencia:</h2>
           <AvatarGroup
             sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
-            max={8}
+            max={16}
           >
             <Tooltip title="HTML" arrow>
-              <Avatar sx={{ width: 80, height: 80 }} alt="HTML" src={html} />
+              <Avatar sx={{ width: 60, height: 60 }} alt="HTML" src={html} />
             </Tooltip>
 
             <Tooltip title="CSS" arrow>
-              <Avatar sx={{ width: 80, height: 80 }} alt="CSS" src={css} />
+              <Avatar sx={{ width: 60, height: 60 }} alt="CSS" src={css} />
             </Tooltip>
 
             <Tooltip title="JavaScript" arrow>
-              <Avatar sx={{ width: 80, height: 80 }} alt="JS" src={js} />
+              <Avatar sx={{ width: 60, height: 60 }} alt="JS" src={js} />
             </Tooltip>
 
             <Tooltip title="Node JS" arrow>
               <Avatar
-                sx={{ width: 80, height: 80 }}
+                sx={{ width: 60, height: 60 }}
                 alt="NodeJS"
                 src={nodejs}
               />
@@ -56,7 +57,7 @@ function SobreMi() {
 
             <Tooltip title="MongoDB" arrow>
               <Avatar
-                sx={{ width: 80, height: 80 }}
+                sx={{ width: 60, height: 60 }}
                 alt="MongoDB"
                 src={mongodb}
               />
@@ -64,7 +65,7 @@ function SobreMi() {
 
             <Tooltip title="ReactJS" arrow>
               <Avatar
-                sx={{ width: 80, height: 80 }}
+                sx={{ width: 60, height: 60 }}
                 alt="ReactJS"
                 src={reactjs}
               />
@@ -72,14 +73,18 @@ function SobreMi() {
 
             <Tooltip title="ExpressJS" arrow>
               <Avatar
-                sx={{ width: 80, height: 80 }}
+                sx={{ width: 60, height: 60 }}
                 alt="Express"
                 src={express}
               />
             </Tooltip>
 
             <Tooltip title="Git" arrow>
-              <Avatar sx={{ width: 80, height: 80 }} alt="Git" src={git} />
+              <Avatar sx={{ width: 60, height: 60 }} alt="Git" src={git} />
+            </Tooltip>
+
+            <Tooltip title="Socket.IO" arrow>
+              <Avatar sx={{ width: 60, height: 60 }} alt="SocketIO" src={socketio} />
             </Tooltip>
 
           </AvatarGroup>
