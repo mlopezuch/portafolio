@@ -10,6 +10,7 @@ import mongodb from "./img/mongodb.png";
 import reactjs from "./img/react.png";
 import express from "./img/express.png";
 import git from "./img/git.png";
+import firebase from './img/firebase.png'
 import socketio from './img/socketio.png'
 import Tooltip from "@mui/material/Tooltip";
 
@@ -35,6 +36,8 @@ function SobreMi() {
             sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
             max={16}
           >
+
+
             <Tooltip title="HTML" arrow>
               <Avatar sx={{ width: 60, height: 60 }} alt="HTML" src={html} />
             </Tooltip>
@@ -81,6 +84,10 @@ function SobreMi() {
 
             <Tooltip title="Git" arrow>
               <Avatar sx={{ width: 60, height: 60 }} alt="Git" src={git} />
+            </Tooltip>
+
+            <Tooltip title="Firebase" arrow>
+              <Avatar sx={{ width: 60, height: 60 }} alt="Firebase" src={firebase} />
             </Tooltip>
 
             <Tooltip title="Socket.IO" arrow>
