@@ -3,3 +3,25 @@
     margin-right: auto;
     max-width: 680px;
 }
+
+.image-gallery-right-nav .image-gallery-svg,
+.image-gallery-left-nav .image-gallery-svg {
+    height: 70px !important;
+    width: 40px !important;
+}
+
+.stack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.stack p {
+    margin: 0 !important;
+    margin-right: 10px !important
+}
+
+.brands {
+    display: flex;
+}
