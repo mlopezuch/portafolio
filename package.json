@@ -2,7 +2,7 @@
     "name": "portafolio",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://mlopezuch.github.io",
+    "homepage": "http://mlopezuch.github.io/portafolio",
     "dependencies": {
         "@emailjs/browser": "^3.4.0",
         "@emotion/react": "^11.7.1",
