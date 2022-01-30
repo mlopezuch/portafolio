@@ -1,6 +1,6 @@
 import React from "react";
 import "./MenuHeader.css";
-import img from "./yo2.jpg";
+import img from "./tofo.jpg";
 import { Avatar } from "@mui/material";
 import { Link, useMatch } from "react-router-dom";
 

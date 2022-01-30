@@ -1,11 +1,17 @@
 import "./App.css";
 import MenuHeader from "./MenuHeader/MenuHeader";
 import SobreMi from "./SobreMi/SobreMi";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Proyectos from "./Proyectos/Proyectos";
 import Contacto from "./Contacto/Contacto";
 
 function App() {
+
   return (
     <Router>
       <div className="App">

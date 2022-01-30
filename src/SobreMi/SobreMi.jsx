@@ -29,7 +29,7 @@ function SobreMi() {
       <p>
         Mi nombre es Matías Castro García, soy un desarrollador fullstack de
         Santiago de Chile con más de 3 años de experiencia en React, Express,
-        MongoDB y Node.js. Apasionado a full por <b>JavaScript</b>, el código
+        MongoDB y Node.js. Apasionado por <b>JavaScript</b>, el código
         legible, la comunicación fluída entre los equipos y las soluciones
         óptimas para cada problema y plazo.
       </p>

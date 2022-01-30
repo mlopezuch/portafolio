@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('fonts/Gilroy-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url('fonts/Gilroy-Light.otf');
+}
+
 * {
     margin: 0;
     padding: 0;
